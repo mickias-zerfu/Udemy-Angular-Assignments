@@ -8,6 +8,7 @@ import { ServerElementComponent } from './section-five/server-element/server-ele
 import { FormsModule } from '@angular/forms';
 import { SectionSevenComponent } from './section-seven/section-seven.component';
 import { BasicHighlightDirective } from './section-seven/basic-highlight/basic-highligt-directive';
+import { BetteHighlightDirective } from './section-seven/basic-highlight/bette-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BasicHighlightDirective } from './section-seven/basic-highlight/basic-h
     CockpitComponent,
     ServerElementComponent,
     SectionSevenComponent,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    BetteHighlightDirective
   ],
   imports: [
     BrowserModule,
