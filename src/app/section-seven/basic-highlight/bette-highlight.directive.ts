@@ -6,8 +6,8 @@ import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
   selector: '[appBetteHighlight]'
 })
 export class BetteHighlightDirective implements OnInit{
-  @Input() defaultColor: string ='transparent';
-  @Input() highlightColor: string ='yellow';
+  @Input() defaultColor = 'transparent';
+  @Input() highlightColor = 'yellow';
   @HostBinding('style.backgroundColor') backgroundColor: string = this.defaultColor;
 
   // tslint:disable-next-line: no-trailing-whitespace
@@ -20,11 +20,13 @@ export class BetteHighlightDirective implements OnInit{
   }
 
 
+  // tslint:disable-next-line: typedef
   @HostListener('mouseenter') mouseover(eventData: Event) {
     this.renderer.setStyle(this.elementR.nativeElement, 'background-color', 'blue');
     this.backgroundColor = this.highlightColor;
   }
 
+  // tslint:disable-next-line: typedef
   @HostListener('mouseleave') mouseleave(eventData: Event) {
     this.renderer.setStyle(this.elementR.nativeElement, 'background-color', 'transparent');
     this.backgroundColor = this.defaultColor;
