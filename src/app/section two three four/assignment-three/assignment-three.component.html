@@ -1,0 +1,10 @@
+<button (click)="showdetails()">Display Details</button>
+<p *ngIf="showdetail">name = mikiyas</p>
+
+<div
+  *ngFor="let logItem of store; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+  [ngClass]="{ 'white': i >= 4 }"
+>
+  {{ logItem }}
+</div>
